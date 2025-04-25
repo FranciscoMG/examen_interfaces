@@ -1,4 +1,4 @@
-import { usuario, clientesNuevos, setUsuarioLogueado } from "./variables_app.js";
+import { usuario, clientesNuevos, setUsuarioLogueado } from "https://franciscomg.github.io/examen_interfaces/variables_app.js";
 
 class Autenticacion {
     constructor() {
