@@ -18,19 +18,19 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
                     <div class="navbar-nav" id="menuUsuario">
-                        <span class="nav-link" onclick="$('#page-content').load('../usuarios/usuario.html');">Usuarios</span>
+                        <span class="nav-link" onclick="$('#page-content').load('usuarios/usuario.html');">Usuarios</span>
                     </div>
                     <div class="navbar-nav" id="menuCliente">
-                        <span class="nav-link" onclick="$('#page-content').load('../clientes/cliente.html');">Clientes</span>
+                        <span class="nav-link" onclick="$('#page-content').load('clientes/cliente.html');">Clientes</span>
                     </div>
                     <div class="navbar-nav" id="menuReserva">
-                        <span class="nav-link" onclick="$('#page-content').load('../reservas/reserva.html');">Reservas</span>
+                        <span class="nav-link" onclick="$('#page-content').load('reservas/reserva.html');">Reservas</span>
                     </div>
                     <div class="navbar-nav" id="menuFactura">
-                        <span class="nav-link" onclick="$('#page-content').load('../facturacion/factura.html');">Facturación</span>
+                        <span class="nav-link" onclick="$('#page-content').load('facturacion/factura.html');">Facturación</span>
                     </div>
                     <div class="navbar-nav" id="menuInforme">
-                        <span class="nav-link" onclick="$('#page-content').load('../informes/informe.html');">Informes</span>
+                        <span class="nav-link" onclick="$('#page-content').load('informes/informe.html');">Informes</span>
                     </div>
                     <div class="navbar-nav ms-auto" id="usuarioActual">
                         <button class="btn btn-outline-info" type="button"></button>
@@ -42,12 +42,12 @@
         <div class="container-fluid mt-5 mb-2" id="page-content"></div>
 
         <script type="module">
-            import { usuarioLogueado } from '/variables_app.js';
+            import { usuarioLogueado } from 'variables_app.js';
 
             $(document).ready(function () {
                 if (usuarioLogueado === null) {
                     $("#menuUsuario, #menuCliente, #menuReserva, #menuFactura, #menuInforme, #usuarioActual").hide();
-                    $("#page-content").load("/usuarios/login.html");
+                    $("#page-content").load("usuarios/login.html");
                 }
             });
         </script>
