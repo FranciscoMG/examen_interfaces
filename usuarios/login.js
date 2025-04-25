@@ -51,7 +51,7 @@ $(document).ready(async function () {
             setUsuarioLogueado(resultado.usuario);
             $("#menuUsuario, #menuCliente, #menuReserva, #menuFactura, #menuInforme, #usuarioActual").show();
             $("#usuarioActual button").text("👤 " + resultado.usuario.nombre + " • Salir");
-            $("#page-content").load("reservas/reserva.html");
+            $("#page-content").load("./reservas/reserva.html");
         } else {
             alert(resultado.mensaje);
         }
@@ -60,6 +60,6 @@ $(document).ready(async function () {
     $("#usuarioActual button").on("click", function () {
         setUsuarioLogueado(null);
         $("#menuUsuario, #menuCliente, #menuReserva, #menuFactura, #menuInforme, #usuarioActual").hide();
-        $("#page-content").load("usuarios/login.html");
+        $("#page-content").load("./usuarios/login.html");
     });
 });
