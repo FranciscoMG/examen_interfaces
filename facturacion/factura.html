@@ -1,0 +1,43 @@
+<div class="row">
+    <h1 class="mt-3 mb-4">Facturación</h1>
+
+    <div class="col-10 offset-1">
+        <form id="formFactura">
+            <div class="mb-3">
+                <label for="facturaClienteSelect" class="form-label">Cliente</label>
+                <select class="form-select" id="facturaClienteSelect" required>
+                    <option value="">Seleccione un cliente</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="facturaCedula" class="form-label">Número de Identificación</label>
+                <input type="text" class="form-control" id="facturaCedula" disabled required>
+            </div>
+            <div class="mb-3">
+                <label for="facturaReservaSelect" class="form-label">Reserva</label>
+                <select class="form-select" id="facturaReservaSelect" required>
+                    <option value="">Seleccione una reserva</option>
+                </select>
+            </div>
+            <button type="button" id="generarFactura" class="btn btn-primary mt-3 w-100">Generar Factura</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="modalFactura" tabindex="-1" aria-labelledby="modalFacturaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalFacturaLabel">Facturación</h5>
+            </div>
+            <div class="modal-body" id="facturaContent">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="imprimirFactura" class="btn btn-secondary">Imprimir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../facturacion/factura.js"></script>

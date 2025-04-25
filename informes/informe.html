@@ -1,0 +1,31 @@
+<div class="row">
+    <h1 class="mt-3 mb-5">Informes</h1>
+
+    <div class="col-10 offset-1">
+        <div class="mb-4">
+            <label for="informeSelect" class="form-label">Seleccione el Informe a Generar</label>
+            <select class="form-select" id="informeSelect">
+                <option value="">Seleccione un informe</option>
+                <option value="personas">Informe de Personas Atendidas</option>
+                <option value="dinero">Informe de Dinero Generado</option>
+                <option value="horarios">Informe de Horarios de Afluencia</option>
+            </select>
+        </div>
+        <button id="generarInforme" class="btn btn-primary w-100">Generar Informe</button>
+    </div>
+</div>
+
+<div class="modal fade" id="modalInforme" tabindex="-1" aria-labelledby="modalInformeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalInformeLabel">Informes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body" id="informeContent">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../informes/informe.js"></script>

@@ -1,0 +1,124 @@
+<div class="row">
+    <h1 class="mt-3 mb-5">Lista de Usuarios</h1>
+
+    <button class="btn btn-primary col-10 offset-1 mb-4" data-bs-toggle="modal" data-bs-target="#modalAgregarUsuario">Agregar Usuario</button>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Comisión</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider" id="tabla-usuarios">
+                <tr id="td-sin-resultados">
+                    <td colspan="7" class="text-center">No hay datos disponibles</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="modalAgregarUsuario" tabindex="-1" aria-labelledby="modalAgregarUsuarioLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formAgregarUsuario">
+                    <div class="mb-3">
+                        <label for="newCedula" class="form-label">Cédula</label>
+                        <input type="text" class="form-control" id="newCedula" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="newNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="newDireccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="newTelefono" pattern="[0-9]{8}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="newCorreo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newContrasena" class="form-label">Contraseña</label>
+                        <input type="text" class="form-control" id="newContrasena" pattern=".{8,}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newComision" class="form-label">Comisión</label>
+                        <input type="number" class="form-control" id="newComision" step="0.1" min="0" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="guardarUsuario">Guardar Usuario</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalModificarUsuario" tabindex="-2" aria-labelledby="modalModificarUsuario"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalUsuarioLabel">Editar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="editCedula" class="form-label">Cédula</label>
+                        <input type="text" class="form-control" id="editCedula" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="editDireccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="editTelefono" pattern="[0-9]{8}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="editCorreo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editContrasena" class="form-label">Contraseña</label>
+                        <input type="text" class="form-control" id="editContrasena" pattern=".{8,}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editComision" class="form-label">Comisión</label>
+                        <input type="number" class="form-control" id="editComision" step="0.1" min="0" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="guardarCambiosUsuario">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../usuarios/usuario.js"></script>

@@ -1,0 +1,107 @@
+<div class="row">
+    <h1 class="mt-3 mb-5">Lista de Clientes</h1>
+
+    <button class="btn btn-primary col-10 offset-1 mb-4" data-bs-toggle="modal" data-bs-target="#modalAgregarCliente">Agregar Cliente</button>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider" id="tabla-clientes">
+                <tr id="td-sin-resultados">
+                    <td colspan="6" class="text-center">No hay datos disponibles</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="modalAgregarCliente" tabindex="-1" aria-labelledby="modalAgregarClienteLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formAgregarCliente">
+                    <div class="mb-3">
+                        <label for="newCedula" class="form-label">Cédula</label>
+                        <input type="text" class="form-control" id="newCedula" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="newNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="newDireccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="newTelefono" pattern="[0-9]{8}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="newCorreo" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="guardarCliente">Guardar Cliente</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalModificarCliente" tabindex="-1" aria-labelledby="modalModificarClienteLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modificar Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formModificarCliente">
+                    <div class="mb-3">
+                        <label for="editCedula" class="form-label">Cédula</label>
+                        <input type="text" class="form-control" id="editCedula" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editDireccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="editDireccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="editTelefono" pattern="[0-9]{8}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="editCorreo" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="guardarCambiosCliente">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../clientes/cliente.js"></script>
