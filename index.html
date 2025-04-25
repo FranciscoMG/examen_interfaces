@@ -42,12 +42,12 @@
         <div class="container-fluid mt-5 mb-2" id="page-content"></div>
 
         <script type="module">
-            import { usuarioLogueado } from 'variables_app.js';
+            import { usuarioLogueado } from 'examen_interfaces/variables_app.js';
 
             $(document).ready(function () {
                 if (usuarioLogueado === null) {
                     $("#menuUsuario, #menuCliente, #menuReserva, #menuFactura, #menuInforme, #usuarioActual").hide();
-                    $("#page-content").load("usuarios/login.html");
+                    $("#page-content").load("examen_interfaces/usuarios/login.html");
                 }
             });
         </script>
